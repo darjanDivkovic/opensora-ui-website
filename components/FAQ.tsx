@@ -43,6 +43,16 @@ const faqs = [
     answer:
       'We provide documentation, a GitHub issues tracker for bug reports, and direct email support for license holders. We actively maintain the software and release updates to keep pace with new model versions and upstream changes.',
   },
+  {
+    question: 'Can I use a rented GPU instead of my own?',
+    answer:
+      "Yes. OpenSora-UI works with any CUDA-capable GPU, including rented instances from providers like Vast.ai, RunPod, or Lambda Labs. You pay the provider directly at their published rates — we're not involved in that transaction at all. We don't mark up GPU time, take a commission, or even know which provider you use. Rates vary but can be as low as $0.09/hr for capable hardware.",
+  },
+  {
+    question: 'Do you track how many videos I generate or collect any usage data?',
+    answer:
+      'No. There is no telemetry in OpenSora-UI. We do not track generation counts, prompt content, video output, model usage, or anything else. Once the app is running, it operates entirely on your machine. We have no server that receives data from your installation. This is not a policy that might change — the app is architecturally incapable of sending this data because we never built the infrastructure to receive it.',
+  },
 ]
 
 export function FAQ() {

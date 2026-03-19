@@ -11,7 +11,7 @@ const benefits = [
     ),
     title: 'No credits. No limits.',
     description:
-      'Cloud AI video tools charge per second of video or per generation. With OpenSora-UI, your GPU runs as many jobs as you want, forever.',
+      'Cloud AI video tools charge per second of video or per generation. With OpenSora-UI, your GPU — or any rented GPU at provider cost — runs as many jobs as you want, forever. We don\'t sell GPU time. We just make it work.',
     stat: '∞ generations',
   },
   {
@@ -46,7 +46,7 @@ const benefits = [
     ),
     title: 'Full privacy.',
     description:
-      'Your prompts, your videos, your ideas — none of it leaves your machine. Nothing is sent to a server. There is no telemetry.',
+      'Your prompts, your videos, your ideas — none of it leaves your machine. We have no telemetry, no analytics, no usage tracking. We genuinely do not know how many videos you\'ve generated. That\'s intentional and permanent.',
     stat: 'Air-gapped capable',
   },
   {
@@ -61,15 +61,30 @@ const benefits = [
       'Test every setting. Iterate fast. Run 50 generations in an afternoon. When your GPU is the only limit, you can experiment freely.',
     stat: 'Your GPU. Your rules.',
   },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M4 7h12M4 10h8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        <rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M13 13l2-1.5-2-1.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    title: 'Models are free. Always.',
+    description:
+      'Every model OpenSora-UI supports is open-source and downloaded directly from official sources like HuggingFace. You never pay for models. We don\'t sell them. We never will.',
+    stat: '$0 for models',
+  },
 ]
 
 const comparison = [
   { label: 'Monthly cost', cloud: '$30–150/mo', local: '$0 after setup' },
   { label: 'Generations', cloud: 'Limited by credits', local: 'Unlimited' },
-  { label: 'Privacy', cloud: 'Uploaded to servers', local: 'Never leaves device' },
+  { label: 'Privacy', cloud: 'Uploaded to servers', local: 'Never leaves device. Zero telemetry.' },
   { label: 'Queue wait', cloud: '30s – 10min', local: '0 seconds' },
   { label: 'Offline use', cloud: 'Internet required', local: 'Fully offline' },
   { label: 'Customization', cloud: 'Platform presets', local: 'Full control' },
+  { label: 'GPU cost', cloud: 'Marked up in credits', local: 'Native provider pricing' },
+  { label: 'Model cost', cloud: 'Bundled into subscription', local: 'Free (open-source)' },
 ]
 
 export function WhyLocal() {

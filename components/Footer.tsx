@@ -30,8 +30,9 @@ export function Footer() {
               </span>
             </div>
             <p className="font-body text-sm text-text-muted leading-relaxed mb-4 max-w-[300px]">
-              A graphical interface for running open-source video generation
-              models locally on your own GPU.
+              A desktop app for running open-source video models on your own
+              hardware — or rented GPU at cost. No subscriptions. No data. No
+              credit games.
             </p>
             {/* Disclaimer */}
             <div className="p-4 rounded-xl border border-white/[0.06] bg-white/[0.02]">

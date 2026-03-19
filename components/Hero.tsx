@@ -1,8 +1,8 @@
-import { Button } from './ui/Button'
+import { Button } from "./ui/Button";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-[64px] overflow-hidden">
+    <section className="relative sm:min-h-screen flex flex-col items-center sm:justify-center pt-[80px] pb-12 sm:pt-[64px] sm:pb-0 overflow-hidden mt-[7%]">
       {/* Radial glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-accent/[0.05] blur-[120px] rounded-full" />
@@ -14,14 +14,14 @@ export function Hero() {
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-          backgroundSize: '80px 80px',
+            "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
+          backgroundSize: "80px 80px",
         }}
       />
 
       <div className="relative mx-auto max-w-[1200px] px-6 md:px-8 text-center">
         {/* Badge */}
-        <div className="animate-fade-in inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-accent/25 bg-accent/[0.07] mb-8">
+        <div className="animate-fade-in inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-accent/25 bg-accent/[0.07] mb-5 sm:mb-8">
           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
           <span className="font-mono text-[11px] text-accent tracking-[0.12em] uppercase">
             Local · Open-Source · GPU Powered
@@ -29,23 +29,22 @@ export function Hero() {
         </div>
 
         {/* Heading */}
-        <h1 className="animate-fade-up delay-100 font-syne font-800 text-[52px] md:text-[72px] lg:text-[88px] text-white leading-[1.04] tracking-[-0.03em] mb-6 max-w-[900px] mx-auto">
-          Run AI Video{' '}
-          <span className="gradient-text">Generation</span>
+        <h1 className="animate-fade-up delay-100 font-syne font-800 text-[38px] md:text-[72px] lg:text-[88px] text-white leading-[1.06] tracking-[-0.03em] mb-4 sm:mb-6 max-w-[900px] mx-auto">
+          Run AI Video <span className="gradient-text">Generation.</span>
           <br />
-          <span className="text-white">Locally.</span>{' '}
-          <span className="text-text-dim">Without the Pain.</span>
+          <span className="text-white">Own It</span>{" "}
+          <span className="text-text-dim">Completely.</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="animate-fade-up delay-200 font-body text-[17px] md:text-[19px] text-text-muted leading-relaxed max-w-[580px] mx-auto mb-10">
-          OpenSora-UI is a clean interface for running Open-Sora and other
-          open-source video models on your own GPU. No complex setup. No cloud
-          limits. No subscription.
+        <p className="animate-fade-up delay-200 font-body text-[16px] md:text-[19px] text-text-muted leading-relaxed max-w-[600px] mx-auto mb-6 sm:mb-10">
+          OpenSora-UI is a desktop app that runs open-source video models on
+          your GPU — or any rented GPU at native cost. No subscriptions. No
+          credit limits. No data collection. Ever.
         </p>
 
         {/* CTAs */}
-        <div className="animate-fade-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
+        <div className="animate-fade-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3 mb-5 sm:mb-8">
           <Button variant="primary" size="lg" href="#pricing">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path
@@ -74,23 +73,23 @@ export function Hero() {
         </div>
 
         {/* Trust line */}
-        <div className="animate-fade-in delay-400 flex items-center justify-center gap-3 text-text-muted">
-          {['One-time purchase', 'Runs locally', 'No subscription'].map(
-            (item, i) => (
-              <span key={item} className="flex items-center gap-3">
-                {i > 0 && (
-                  <span className="w-1 h-1 rounded-full bg-text-dim" />
-                )}
-                <span className="font-mono text-[12px] tracking-wide">
-                  {item}
-                </span>
+        <div className="animate-fade-in delay-400 flex flex-wrap items-center justify-center gap-3 text-text-muted">
+          {[
+            "Pay once · $29",
+            "Rent GPU at native cost (~$0.09/hr)",
+            "Zero data. Zero telemetry.",
+          ].map((item, i) => (
+            <span key={item} className="flex items-center gap-3">
+              {i > 0 && <span className="w-1 h-1 rounded-full bg-text-dim" />}
+              <span className="font-mono text-[12px] tracking-wide">
+                {item}
               </span>
-            )
-          )}
+            </span>
+          ))}
         </div>
 
         {/* UI Mockup */}
-        <div className="animate-fade-up delay-500 mt-20 relative mx-auto max-w-[900px]">
+        <div className="animate-fade-up delay-500 mt-16 relative mx-auto max-w-[900px] hidden sm:block">
           {/* Outer glow */}
           <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-accent/20 to-transparent pointer-events-none" />
           <div className="absolute -inset-8 bg-accent/[0.03] blur-3xl rounded-3xl pointer-events-none" />
@@ -115,7 +114,7 @@ export function Hero() {
             </div>
 
             {/* App layout */}
-            <div className="flex" style={{ height: '400px' }}>
+            <div className="flex" style={{ height: "400px" }}>
               {/* Sidebar */}
               <div className="w-[220px] border-r border-white/[0.06] bg-[#08080f] p-4 flex flex-col gap-2 flex-shrink-0">
                 <div className="mb-2">
@@ -124,22 +123,22 @@ export function Hero() {
                   </span>
                 </div>
                 {[
-                  { name: 'Open-Sora v1.2', active: true, size: '14.2 GB' },
-                  { name: 'Wan T2V', active: false, size: '8.7 GB' },
-                  { name: 'Mochi 1', active: false, size: '19.1 GB' },
-                  { name: 'HunyuanVideo', active: false, size: '22.4 GB' },
+                  { name: "Open-Sora v1.2", active: true, size: "14.2 GB" },
+                  { name: "Wan T2V", active: false, size: "8.7 GB" },
+                  { name: "Mochi 1", active: false, size: "19.1 GB" },
+                  { name: "HunyuanVideo", active: false, size: "22.4 GB" },
                 ].map((m) => (
                   <div
                     key={m.name}
                     className={`flex items-center justify-between p-2.5 rounded-lg text-left ${
                       m.active
-                        ? 'bg-accent/10 border border-accent/20'
-                        : 'hover:bg-white/[0.03]'
+                        ? "bg-accent/10 border border-accent/20"
+                        : "hover:bg-white/[0.03]"
                     }`}
                   >
                     <div>
                       <div
-                        className={`font-body text-[12px] font-500 ${m.active ? 'text-accent' : 'text-text-muted'}`}
+                        className={`font-body text-[12px] font-500 ${m.active ? "text-accent" : "text-text-muted"}`}
                       >
                         {m.name}
                       </div>
@@ -171,9 +170,9 @@ export function Hero() {
                 {/* Settings row */}
                 <div className="grid grid-cols-3 gap-3">
                   {[
-                    { label: 'Resolution', value: '1280×720' },
-                    { label: 'Frames', value: '120' },
-                    { label: 'Steps', value: '50' },
+                    { label: "Resolution", value: "1280×720" },
+                    { label: "Frames", value: "120" },
+                    { label: "Steps", value: "50" },
                   ].map((s) => (
                     <div
                       key={s.label}
@@ -202,7 +201,7 @@ export function Hero() {
                   <div className="h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-accent to-accent-2"
-                      style={{ width: '42%' }}
+                      style={{ width: "42%" }}
                     />
                   </div>
                 </div>
@@ -217,7 +216,15 @@ export function Hero() {
                   </div>
                   <div className="h-10 w-10 rounded-lg border border-white/[0.08] flex items-center justify-center text-text-muted">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <rect x="4" y="4" width="8" height="8" rx="1.5" fill="currentColor" opacity="0.7" />
+                      <rect
+                        x="4"
+                        y="4"
+                        width="8"
+                        height="8"
+                        rx="1.5"
+                        fill="currentColor"
+                        opacity="0.7"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -230,9 +237,9 @@ export function Hero() {
                 </span>
                 <div className="space-y-2">
                   {[
-                    { id: '#001', status: 'done', pct: 100 },
-                    { id: '#002', status: 'running', pct: 47 },
-                    { id: '#003', status: 'pending', pct: 0 },
+                    { id: "#001", status: "done", pct: 100 },
+                    { id: "#002", status: "running", pct: 47 },
+                    { id: "#003", status: "pending", pct: 0 },
                   ].map((job) => (
                     <div
                       key={job.id}
@@ -244,11 +251,11 @@ export function Hero() {
                         </span>
                         <span
                           className={`font-mono text-[10px] ${
-                            job.status === 'done'
-                              ? 'text-accent'
-                              : job.status === 'running'
-                              ? 'text-[#ffbd2e]'
-                              : 'text-text-dim'
+                            job.status === "done"
+                              ? "text-accent"
+                              : job.status === "running"
+                                ? "text-[#ffbd2e]"
+                                : "text-text-dim"
                           }`}
                         >
                           {job.status}
@@ -257,11 +264,11 @@ export function Hero() {
                       <div className="h-1 rounded-full bg-white/[0.05] overflow-hidden">
                         <div
                           className={`h-full rounded-full transition-all ${
-                            job.status === 'done'
-                              ? 'bg-accent'
-                              : job.status === 'running'
-                              ? 'bg-[#ffbd2e]'
-                              : 'bg-white/10'
+                            job.status === "done"
+                              ? "bg-accent"
+                              : job.status === "running"
+                                ? "bg-[#ffbd2e]"
+                                : "bg-white/10"
                           }`}
                           style={{ width: `${job.pct}%` }}
                         />
@@ -278,7 +285,7 @@ export function Hero() {
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#060609] to-transparent pointer-events-none" />
     </section>
-  )
+  );
 }
 
 function GithubIcon() {
@@ -286,5 +293,5 @@ function GithubIcon() {
     <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
       <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
     </svg>
-  )
+  );
 }
