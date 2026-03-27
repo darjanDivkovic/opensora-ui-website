@@ -1,6 +1,9 @@
+"use client";
+
 import { Container } from './ui/Container'
 import { Section } from './ui/Section'
 import { PricingCard } from './ui/PricingCard'
+import { WishlistButton } from './WishlistButton'
 
 const features = [
   { text: 'Full desktop UI application' },
@@ -43,17 +46,38 @@ export function Pricing() {
         <PricingCard
           price="$29"
           features={features}
-          ctaText="Buy License"
-          ctaHref="#"
+          ctaSlot={
+            <div className="space-y-3">
+              {/* Wishlist callout */}
+              <div className="rounded-xl border border-accent/20 bg-accent/[0.06] p-4">
+                <p className="font-mono text-[11px] text-accent text-center uppercase tracking-widest mb-2">
+                  Wishlist members get
+                </p>
+                <div className="flex items-center justify-center gap-6">
+                  {[
+                    { label: '33% Off', sub: 'Lifetime price' },
+                    { label: 'Feature Requests', sub: 'Shape the roadmap' },
+                    { label: 'Direct Access', sub: 'Close collaboration' },
+                  ].map((p) => (
+                    <div key={p.label} className="text-center">
+                      <div className="font-syne font-700 text-[13px] text-white">{p.label}</div>
+                      <div className="font-mono text-[10px] text-text-dim">{p.sub}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <WishlistButton className="w-full justify-center" />
+            </div>
+          }
           disclaimer="Models are not included. They are downloaded separately from official sources (HuggingFace, GitHub). Open-Sora is an open-source project by HPC-AI Tech."
         />
 
         {/* Trust line */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
           {[
-            { icon: '🔒', text: 'Secure checkout' },
-            { icon: '📦', text: 'Instant delivery' },
-            { icon: '♾️', text: 'Lifetime license' },
+            { icon: '⭐', text: '33% off — founding members only' },
+            { icon: '💬', text: 'Request features directly' },
+            { icon: '♾️', text: 'Lifetime license when ready' },
           ].map((item) => (
             <div key={item.text} className="flex items-center gap-2">
               <span className="text-[14px]">{item.icon}</span>

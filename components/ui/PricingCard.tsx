@@ -1,4 +1,4 @@
-import { Button } from './Button'
+import React from 'react'
 
 interface PricingFeature {
   text: string
@@ -8,8 +8,7 @@ interface PricingCardProps {
   price: string
   period?: string
   features: PricingFeature[]
-  ctaText: string
-  ctaHref: string
+  ctaSlot: React.ReactNode
   disclaimer?: string
 }
 
@@ -17,8 +16,7 @@ export function PricingCard({
   price,
   period,
   features,
-  ctaText,
-  ctaHref,
+  ctaSlot,
   disclaimer,
 }: PricingCardProps) {
   return (
@@ -79,9 +77,7 @@ export function PricingCard({
         </ul>
 
         {/* CTA */}
-        <Button variant="primary" size="lg" href={ctaHref} className="w-full">
-          {ctaText}
-        </Button>
+        {ctaSlot}
 
         {/* Disclaimer */}
         {disclaimer && (

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { WishlistNavButton } from "./WishlistButton";
 
 const navLinks = [
   { label: "Features", href: "#features" },
@@ -66,21 +67,7 @@ export function Navbar() {
 
         {/* CTAs */}
         <div className="flex items-center gap-2">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 font-body text-sm text-text-muted hover:text-text transition-colors px-3 py-2 rounded-lg hover:bg-white/[0.04]"
-          >
-            <GithubIcon className="w-4 h-4" />
-            GitHub
-          </a>
-          <a
-            href="#pricing"
-            className="inline-flex items-center gap-2 bg-accent text-bg font-body font-600 text-sm px-4 py-2 rounded-lg hover:bg-accent/90 hover:shadow-[0_0_18px_rgba(0,221,184,0.35)] transition-all duration-200"
-          >
-            Buy License
-          </a>
+          <WishlistNavButton />
         </div>
       </div>
     </header>
