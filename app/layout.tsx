@@ -25,22 +25,24 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'OpenSora-UI — Run AI Video Generation Locally',
+  title: 'OpenSora-UI — Rent Cloud GPUs for AI Video Generation',
   description:
-    'A clean graphical interface for running Open-Sora and other open-source video models on your own GPU. No complex setup. No cloud. No subscription.',
+    'A desktop app that connects you to RunPod, Vast.ai, and more so you can rent GPUs at cost and generate AI video without touching a terminal. No subscriptions. No markups.',
   keywords: [
     'Open-Sora',
     'AI video generation',
-    'local AI',
-    'GPU',
+    'cloud GPU',
+    'RunPod',
+    'Vast.ai',
     'video diffusion',
     'OpenSora UI',
-    'local video generation',
+    'cloud video generation',
+    'GPU rental',
   ],
   openGraph: {
-    title: 'OpenSora-UI — Run AI Video Generation Locally',
+    title: 'OpenSora-UI — Rent Cloud GPUs for AI Video Generation',
     description:
-      'A clean graphical interface for running Open-Sora and other open-source video generation models on your GPU.',
+      'A desktop app that connects you to RunPod, Vast.ai, and more so you can rent GPUs at cost and generate AI video without touching a terminal.',
     type: 'website',
   },
 }
