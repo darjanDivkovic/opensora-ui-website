@@ -133,16 +133,16 @@ export function Problem() {
           <div className="rounded-xl border border-white/[0.08] bg-surface/60 overflow-hidden">
             <div className="border-b border-white/[0.06] px-5 py-4 flex items-center justify-between">
               <span className="font-mono text-[11px] text-text-dim uppercase tracking-widest">
-                Install process
+                Cloud setup
               </span>
               <span className="font-mono text-[11px] text-accent">✓ Done</span>
             </div>
             <div className="p-5 space-y-3">
               {[
-                { step: '01', label: 'Download OpenSora-UI installer', done: true },
-                { step: '02', label: 'Run system compatibility check', done: true },
-                { step: '03', label: 'Select model from library', done: true },
-                { step: '04', label: 'Start generating videos', done: true },
+                { step: '01', label: 'Install OpenSora-UI', done: true },
+                { step: '02', label: 'Add your cloud API keys', done: true },
+                { step: '03', label: 'Rent a GPU & let us set it up', done: true },
+                { step: '04', label: 'Generate video', done: true },
               ].map((s) => (
                 <div key={s.step} className="flex items-center gap-4">
                   <div className="w-8 h-8 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
@@ -181,9 +181,10 @@ export function Problem() {
               <span className="gradient-text">No terminal required.</span>
             </h2>
             <p className="font-body text-text-muted text-[15px] leading-relaxed">
-              OpenSora-UI handles all the dependency management, CUDA
-              configuration, and environment setup automatically. You click
-              install. You pick a model. You generate video. That&apos;s it.
+              OpenSora-UI connects to cloud providers and handles all the remote
+              dependency management, environment setup, and GPU configuration
+              automatically. You add your API keys. You rent a GPU. You generate
+              video. That&apos;s it.
             </p>
           </div>
         </div>

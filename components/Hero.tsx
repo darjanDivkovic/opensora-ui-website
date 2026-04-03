@@ -40,7 +40,7 @@ export function Hero() {
 
         {/* Subtitle */}
         <p className="animate-fade-up delay-200 font-body text-[16px] md:text-[19px] text-text-muted leading-relaxed max-w-[600px] mx-auto mb-6 sm:mb-10">
-          OpenSora-UI is a desktop app that connects you to RunPod and Vast.ai so you can rent a GPU, set it up in one click, and generate AI video — without touching a terminal. No subscriptions. No GPU markups. No data collection. Ever.
+          OpenSora-UI is a desktop app that connects you to RunPod, Vast.ai, and more so you can rent a GPU, set it up in one click, and generate AI video — without touching a terminal. No subscriptions. No GPU markups. No data collection. Ever.
         </p>
 
         {/* CTAs */}
