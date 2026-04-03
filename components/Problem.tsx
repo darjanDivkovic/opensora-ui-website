@@ -37,7 +37,7 @@ export function Problem() {
             </div>
 
             <h2 className="font-syne font-800 text-[32px] md:text-[38px] text-white leading-tight tracking-tight mb-4">
-              Running Open-Sora{' '}
+              Running Open Source Video Gen Models{' '}
               <span className="text-text-muted">is unnecessarily hard.</span>
             </h2>
             <p className="font-body text-text-muted text-[15px] leading-relaxed mb-8">
