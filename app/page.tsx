@@ -5,6 +5,7 @@ import { Problem } from '@/components/Problem'
 import { Features } from '@/components/Features'
 import { HowItWorks } from '@/components/HowItWorks'
 import { WhyLocal } from '@/components/WhyLocal'
+import { NeverDo } from '@/components/NeverDo'
 import { VsCloud } from '@/components/VsCloud'
 import { Pricing } from '@/components/Pricing'
 import { FAQ } from '@/components/FAQ'
@@ -21,6 +22,7 @@ export default function Home() {
         <Features />
         <HowItWorks />
         <WhyLocal />
+        <NeverDo />
         <VsCloud />
         <Pricing />
         <FAQ />

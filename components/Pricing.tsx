@@ -6,11 +6,13 @@ import { PricingCard } from './ui/PricingCard'
 import { WishlistButton } from './WishlistButton'
 
 const features = [
-  { text: 'Full desktop UI application' },
-  { text: 'Automatic installer & dependency manager' },
-  { text: 'Model library & download manager' },
-  { text: 'Job queue with progress tracking' },
-  { text: 'Local GPU acceleration (CUDA)' },
+  { text: 'Desktop app for Windows, macOS, Linux' },
+  { text: 'RunPod + Vast.ai integration (compare GPU prices, create instances)' },
+  { text: 'Automated remote environment setup (no terminal required)' },
+  { text: 'Open-Sora v2 and Wan2.1 T2V-14B support' },
+  { text: 'Text-to-Video and Image-to-Video' },
+  { text: 'Job queue with real-time log streaming' },
+  { text: 'Video gallery with download' },
   { text: 'Lifetime access — no expiry' },
   { text: 'Free updates for current major version' },
   { text: 'No subscription, ever' },
@@ -44,30 +46,10 @@ export function Pricing() {
         </div>
 
         <PricingCard
-          price="$29"
+          price="$49"
           features={features}
           ctaSlot={
-            <div className="space-y-3">
-              {/* Wishlist callout */}
-              <div className="rounded-xl border border-accent/20 bg-accent/[0.06] p-4">
-                <p className="font-mono text-[11px] text-accent text-center uppercase tracking-widest mb-2">
-                  Wishlist members get
-                </p>
-                <div className="flex items-center justify-center gap-6">
-                  {[
-                    { label: '33% Off', sub: 'Lifetime price' },
-                    { label: 'Feature Requests', sub: 'Shape the roadmap' },
-                    { label: 'Direct Access', sub: 'Close collaboration' },
-                  ].map((p) => (
-                    <div key={p.label} className="text-center">
-                      <div className="font-syne font-700 text-[13px] text-white">{p.label}</div>
-                      <div className="font-mono text-[10px] text-text-dim">{p.sub}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <WishlistButton className="w-full justify-center" />
-            </div>
+            <WishlistButton className="w-full justify-center" />
           }
           disclaimer="Models are not included. They are downloaded separately from official sources (HuggingFace, GitHub). Open-Sora is an open-source project by HPC-AI Tech."
         />
@@ -75,9 +57,8 @@ export function Pricing() {
         {/* Trust line */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
           {[
-            { icon: '⭐', text: '33% off — founding members only' },
             { icon: '💬', text: 'Request features directly' },
-            { icon: '♾️', text: 'Lifetime license when ready' },
+            { icon: '♾️', text: 'Lifetime license' },
           ].map((item) => (
             <div key={item.text} className="flex items-center gap-2">
               <span className="text-[14px]">{item.icon}</span>

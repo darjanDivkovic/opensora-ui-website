@@ -9,10 +9,10 @@ const benefits = [
         <path d="M7 10l2 2 4-4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: 'No credits. No limits.',
+    title: 'Unlimited generations',
     description:
-      'Cloud AI video tools charge per second of video or per generation. With OpenSora-UI, your GPU — or any rented GPU at provider cost — runs as many jobs as you want, forever. We don\'t sell GPU time. We just make it work.',
-    stat: '∞ generations',
+      'No credits, no generation limits. You pay for GPU time by the hour at provider rates. Run 50 jobs or 5 — the cost is transparent and direct.',
+    stat: 'Pay per hour',
   },
   {
     icon: (
@@ -21,10 +21,10 @@ const benefits = [
         <circle cx="10" cy="10" r="3" stroke="currentColor" strokeWidth="1.4" />
       </svg>
     ),
-    title: 'No queue. Instant start.',
+    title: 'Real GPU prices',
     description:
-      'Cloud services have processing queues that can make you wait minutes — or hours during peak times. Local means you start the moment you click Generate.',
-    stat: '0s wait time',
+      'RunPod and Vast.ai publish their rates. We show you those rates unmodified. We don\'t take a commission, referral fee, or markup. Our job is to connect you, not profit from the connection.',
+    stat: 'No markups',
   },
   {
     icon: (
@@ -33,10 +33,10 @@ const benefits = [
         <path d="M7 10l2 2 4-4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: 'No subscription.',
+    title: 'One-time $49',
     description:
-      'Buy once, use forever. No monthly fees, no seat licenses, no pricing tiers. The license is yours for as long as you need it.',
-    stat: 'One-time $29',
+      'Pay once, use forever. No monthly fees, no seat licenses, no pricing tiers. The license is yours permanently.',
+    stat: 'Lifetime access',
   },
   {
     icon: (
@@ -44,10 +44,10 @@ const benefits = [
         <path d="M10 2l2.5 5H18l-4.5 3.5 1.5 5.5L10 13l-5 3 1.5-5.5L2 7h5.5z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
       </svg>
     ),
-    title: 'Full privacy.',
+    title: 'No data collection',
     description:
-      'Your prompts, your videos, your ideas — none of it leaves your machine. We have no telemetry, no analytics, no usage tracking. We genuinely do not know how many videos you\'ve generated. That\'s intentional and permanent.',
-    stat: 'Air-gapped capable',
+      'Your prompts, your videos, your ideas — none of it reaches us. No telemetry, no analytics, no usage tracking.',
+    stat: 'Zero telemetry',
   },
   {
     icon: (
@@ -56,10 +56,10 @@ const benefits = [
         <rect x="3" y="3" width="14" height="14" rx="3" stroke="currentColor" strokeWidth="1.4" />
       </svg>
     ),
-    title: 'Unlimited runs.',
+    title: 'Multi-instance parallelism',
     description:
-      'Test every setting. Iterate fast. Run 50 generations in an afternoon. When your GPU is the only limit, you can experiment freely.',
-    stat: 'Your GPU. Your rules.',
+      'Run jobs across multiple cloud instances simultaneously. The job queue handles routing automatically.',
+    stat: 'Parallel jobs',
   },
   {
     icon: (
@@ -69,19 +69,19 @@ const benefits = [
         <path d="M13 13l2-1.5-2-1.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: 'Models are free. Always.',
+    title: 'Free open-source models',
     description:
-      'Every model OpenSora-UI supports is open-source and downloaded directly from official sources like HuggingFace. You never pay for models. We don\'t sell them. We never will.',
+      'Open-Sora, Wan, Mochi, HunyuanVideo — all open-source, downloaded directly from HuggingFace. You never pay for the models themselves.',
     stat: '$0 for models',
   },
 ]
 
 const comparison = [
-  { label: 'Monthly cost', cloud: '$30–150/mo', local: '$0 after setup' },
-  { label: 'Generations', cloud: 'Limited by credits', local: 'Unlimited' },
-  { label: 'Privacy', cloud: 'Uploaded to servers', local: 'Never leaves device. Zero telemetry.' },
-  { label: 'Queue wait', cloud: '30s – 10min', local: '0 seconds' },
-  { label: 'Offline use', cloud: 'Internet required', local: 'Fully offline' },
+  { label: 'Monthly cost', cloud: '$30–150/mo', local: '$0 after one-time $49' },
+  { label: 'Generations', cloud: 'Limited by credits', local: 'Unlimited (pay GPU time only)' },
+  { label: 'Privacy', cloud: 'Uploaded to servers', local: 'Never sent to us. Zero telemetry.' },
+  { label: 'Queue wait', cloud: '30s–10min (platform queue)', local: 'Your GPU, your queue' },
+  { label: 'Offline use', cloud: 'Internet required', local: 'Internet required (GPU is remote)' },
   { label: 'Customization', cloud: 'Platform presets', local: 'Full control' },
   { label: 'GPU cost', cloud: 'Marked up in credits', local: 'Native provider pricing' },
   { label: 'Model cost', cloud: 'Bundled into subscription', local: 'Free (open-source)' },
@@ -94,14 +94,13 @@ export function WhyLocal() {
         {/* Header */}
         <div className="text-center mb-20">
           <span className="font-mono text-[11px] text-text-dim uppercase tracking-[0.15em] block mb-4">
-            Why Local
+            Skip the Platform Tax
           </span>
           <h2 className="font-syne font-800 text-[36px] md:text-[48px] text-white leading-tight tracking-tight mb-4">
-            Own your compute.
+            Rent GPU at cost.
           </h2>
           <p className="font-body text-text-muted text-[16px] max-w-[500px] mx-auto leading-relaxed">
-            Cloud video generation tools rent you time on hardware you don&apos;t
-            own. Local generation means the power is yours.
+            Cloud AI video tools like Runway and Kling buy GPU time in bulk and resell it to you — marked up, credit-gated, and subscription-locked. OpenSora-UI connects directly to providers like RunPod and Vast.ai so you pay their actual rate and keep full control.
           </p>
         </div>
 

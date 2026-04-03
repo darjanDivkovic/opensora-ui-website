@@ -43,7 +43,8 @@ export function Problem() {
             <p className="font-body text-text-muted text-[15px] leading-relaxed mb-8">
               Before you can generate a single frame, you&apos;re stuck configuring
               conda environments, resolving CUDA version mismatches, chasing
-              dependency conflicts, and deciphering multi-page install guides.
+              dependency conflicts, deciphering multi-page install guides, and
+              figuring out which cloud GPU providers to use and at what price.
             </p>
 
             <div className="flex flex-wrap gap-2">

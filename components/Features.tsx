@@ -17,7 +17,7 @@ const features = [
     ),
     title: 'One-Click Install',
     description:
-      'No conda, no pip conflicts, no CUDA headaches. The installer handles all dependencies and environment configuration automatically.',
+      'No conda, no SSH, no terminal. OpenSora-UI automatically sets up the full environment on your rented GPU — packages, dependencies, model weights.',
   },
   {
     icon: (
@@ -28,7 +28,7 @@ const features = [
     ),
     title: 'Model Manager',
     description:
-      'Browse, download, and switch between Open-Sora, Wan, Mochi, HunyuanVideo, and more from a unified library view.',
+      'Browse and switch between Open-Sora, Wan, Mochi, HunyuanVideo, and more — with new models added as they\'re ready. Open-Sora v2 and Wan2.1 available today.',
   },
   {
     icon: (
@@ -39,7 +39,7 @@ const features = [
     ),
     title: 'Job Queue',
     description:
-      'Queue multiple generation jobs and let them run back-to-back. Track progress, cancel jobs, and review history — all in one place.',
+      'Queue multiple generation jobs across cloud instances. Track progress, stream logs in real time, cancel jobs, review history.',
   },
   {
     icon: (
@@ -49,9 +49,9 @@ const features = [
         <path d="M9 8v3M7.5 9.5L9 8l1.5 1.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: 'Local GPU Acceleration',
+    title: 'GPU Provider Browser',
     description:
-      'Full CUDA support out of the box. OpenSora-UI automatically detects your GPU and configures optimal settings for your hardware.',
+      'Browse GPU offers from RunPod and Vast.ai filtered by model requirements. Compare real prices. Create and manage instances without leaving the app.',
   },
   {
     icon: (
@@ -72,9 +72,9 @@ const features = [
         <path d="M5.5 14.5L4 16M12.5 14.5L14 16" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
       </svg>
     ),
-    title: 'Fully Offline',
+    title: 'Zero Markups',
     description:
-      'Once models are downloaded, nothing phones home. No analytics, no license checks, no cloud dependency. Your GPU, your data, your control.',
+      'You see the provider\'s real price. You pay them directly. We never take a cut, referral fee, or markup. Our job is to connect you, not profit from the connection.',
   },
 ]
 
@@ -93,7 +93,7 @@ export function Features() {
           </h2>
           <p className="font-body text-text-muted text-[16px] max-w-[520px] mx-auto leading-relaxed">
             OpenSora-UI is purpose-built for running open-source video models
-            locally — not adapted from something else.
+            on rented cloud GPUs — without the setup hell.
           </p>
         </div>
 

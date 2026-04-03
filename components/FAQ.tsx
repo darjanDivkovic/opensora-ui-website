@@ -11,12 +11,12 @@ const faqs = [
   {
     question: 'Do I need a GPU?',
     answer:
-      'Yes. AI video generation is computationally intensive and requires a CUDA-capable NVIDIA GPU. We recommend a minimum of 8 GB VRAM for smaller models (Open-Sora at lower resolutions), and 16–24 GB VRAM for larger models like HunyuanVideo or high-resolution generation. AMD GPU support via ROCm is experimental.',
+      'You don\'t need a GPU in your own machine. OpenSora-UI connects to RunPod and Vast.ai so you rent a GPU in the cloud. The models require 48–80 GB VRAM — only available via cloud providers at this time. You pay the provider directly by the hour.',
   },
   {
     question: 'Does the license include the models?',
     answer:
-      'No. The $29 license covers the OpenSora-UI application only — the installer, the interface, and the model manager. The actual AI models (Open-Sora, Wan, Mochi, etc.) are open-source and free, and are downloaded directly from their official sources (HuggingFace, GitHub) through the app. You never pay for the models themselves.',
+      'The actual AI models (Open-Sora v2, Wan2.1 T2V-14B, and others as they\'re added) are open-source and free, downloaded directly from HuggingFace through the app.',
   },
   {
     question: 'Is this a subscription?',
@@ -26,7 +26,7 @@ const faqs = [
   {
     question: 'Can I use it completely offline?',
     answer:
-      'Yes, once you have downloaded the models you want to use, OpenSora-UI works entirely offline. There is no internet connection required for generation. The only time internet is needed is for downloading models — and that uses official public sources (HuggingFace).',
+      'The app requires an internet connection to communicate with RunPod and Vast.ai APIs and to execute jobs on remote GPUs. Your prompts and video outputs are never sent to us — but they do pass through your chosen cloud GPU provider under their terms.',
   },
   {
     question: 'Is this legal to use?',
@@ -36,7 +36,7 @@ const faqs = [
   {
     question: 'What operating systems are supported?',
     answer:
-      'OpenSora-UI supports Windows 10/11 (x64) with NVIDIA GPU. macOS and Linux support is in active development. All platforms require an NVIDIA CUDA-capable GPU. Metal (Apple Silicon) support is planned for a future release.',
+      'OpenSora-UI runs on Windows 10/11, macOS, and Linux. Because video generation runs on rented cloud GPUs (not your local machine), you don\'t need an NVIDIA GPU in your own computer.',
   },
   {
     question: 'What if I need help or find a bug?',
@@ -46,12 +46,17 @@ const faqs = [
   {
     question: 'Can I use a rented GPU instead of my own?',
     answer:
-      "Yes. OpenSora-UI works with any CUDA-capable GPU, including rented instances from providers like Vast.ai, RunPod, or Lambda Labs. You pay the provider directly at their published rates — we're not involved in that transaction at all. We don't mark up GPU time, take a commission, or even know which provider you use. Rates vary but can be as low as $0.09/hr for capable hardware.",
+      'Yes — that\'s the primary way OpenSora-UI works. You connect your RunPod or Vast.ai account, browse available GPU offers (filtered by what each model needs), and rent one directly at the provider\'s published rate. OpenSora-UI handles setup and job execution. You pay the provider directly — we\'re not involved in that transaction.',
   },
   {
     question: 'Do you track how many videos I generate or collect any usage data?',
     answer:
       'No. There is no telemetry in OpenSora-UI. We do not track generation counts, prompt content, video output, model usage, or anything else. Once the app is running, it operates entirely on your machine. We have no server that receives data from your installation. This is not a policy that might change — the app is architecturally incapable of sending this data because we never built the infrastructure to receive it.',
+  },
+  {
+    question: 'What models are supported?',
+    answer:
+      'Open-Sora v2 and Wan2.1 T2V-14B are available today. Both support Text-to-Video and Image-to-Video. Mochi, HunyuanVideo, CogVideoX, and AnimateDiff are in the pipeline and will be added as support is ready.',
   },
 ]
 

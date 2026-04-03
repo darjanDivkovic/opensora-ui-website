@@ -6,29 +6,29 @@ const steps = [
     number: '01',
     title: 'Install OpenSora-UI',
     description:
-      'Download the installer for your platform. Run it once. Dependencies are handled automatically — no terminal required.',
+      'Download the app for your platform. Run it once.',
     detail: 'Windows · macOS · Linux',
   },
   {
     number: '02',
-    title: 'Run System Check',
+    title: 'Add your cloud API keys',
     description:
-      'OpenSora-UI scans your GPU, CUDA version, and available memory. It tells you exactly which models your system can run.',
-    detail: 'NVIDIA GPU required · 8 GB VRAM minimum',
+      'Enter your RunPod or Vast.ai API key. OpenSora-UI shows you available GPUs at their real published prices — you compare and choose.',
+    detail: 'RunPod · Vast.ai',
   },
   {
     number: '03',
-    title: 'Download a Model',
+    title: 'Rent a GPU & let us set it up',
     description:
-      'Pick from a curated list of supported open-source models. One click to download directly from official HuggingFace sources.',
-    detail: 'Open-Sora · Wan · Mochi · HunyuanVideo',
+      'Pick a GPU offer. One click starts the instance and automatically installs everything: conda environment, dependencies, and model weights (Open-Sora v2 or Wan2.1). Real-time progress shown in the app.',
+    detail: 'Automated setup · No terminal',
   },
   {
     number: '04',
-    title: 'Generate Video',
+    title: 'Generate video',
     description:
-      'Write your prompt, set your resolution and frame count, hit Generate. Your GPU does the work. No cloud, no queue, no wait.',
-    detail: 'Runs 100% locally on your hardware',
+      'Write your prompt (or upload a reference image for Image-to-Video). Hit Generate. Your rented GPU does the work. Download your video. Terminate the instance when done.',
+    detail: 'Runs on your rented GPU. You pay the provider directly.',
   },
 ]
 
@@ -94,7 +94,7 @@ export function HowItWorks() {
             href="#pricing"
             className="inline-flex items-center gap-2 font-body text-sm text-accent hover:text-accent/80 transition-colors group"
           >
-            Get started for $29
+            Get started for $49
             <svg
               width="14"
               height="14"

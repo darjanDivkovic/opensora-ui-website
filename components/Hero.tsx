@@ -26,7 +26,7 @@ export function Hero() {
         <div className="animate-fade-in inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-accent/25 bg-accent/[0.07] mb-5 sm:mb-8">
           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
           <span className="font-mono text-[11px] text-accent tracking-[0.12em] uppercase">
-            Local · Open-Source · GPU Powered
+            Cloud · Open-Source · GPU Powered
           </span>
         </div>
 
@@ -40,9 +40,7 @@ export function Hero() {
 
         {/* Subtitle */}
         <p className="animate-fade-up delay-200 font-body text-[16px] md:text-[19px] text-text-muted leading-relaxed max-w-[600px] mx-auto mb-6 sm:mb-10">
-          OpenSora-UI is a desktop app that runs open-source video models on
-          your GPU — or any rented GPU at native cost. No subscriptions. No
-          credit limits. No data collection. Ever.
+          OpenSora-UI is a desktop app that connects you to RunPod and Vast.ai so you can rent a GPU, set it up in one click, and generate AI video — without touching a terminal. No subscriptions. No GPU markups. No data collection. Ever.
         </p>
 
         {/* CTAs */}
@@ -53,7 +51,7 @@ export function Hero() {
         {/* Trust line */}
         <div className="animate-fade-in delay-400 flex flex-wrap items-center justify-center gap-3 text-text-muted">
           {[
-            "33% off — wishlist only",
+            "One-time license · No subscription",
             "Request features directly",
             "Zero data. Zero telemetry.",
           ].map((item, i) => (
