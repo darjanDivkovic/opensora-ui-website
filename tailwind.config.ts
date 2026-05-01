@@ -17,8 +17,8 @@ const config: Config = {
         bg: '#060609',
         surface: '#0d0d15',
         'surface-2': '#12121c',
-        accent: '#00ddb8',
-        'accent-2': '#00a8e0',
+        accent: '#D45D13',
+        'accent-2': '#F3BC47',
         text: {
           DEFAULT: '#c8c8d8',
           muted: '#60607a',
@@ -28,7 +28,7 @@ const config: Config = {
       borderColor: {
         DEFAULT: 'rgba(255,255,255,0.07)',
         hover: 'rgba(255,255,255,0.15)',
-        accent: '#00ddb8',
+        accent: '#D45D13',
       },
       animation: {
         'fade-up': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards',

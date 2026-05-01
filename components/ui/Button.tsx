@@ -27,7 +27,7 @@ export function Button({
 
   const variants = {
     primary:
-      'bg-accent text-bg hover:bg-accent/90 hover:shadow-[0_0_24px_rgba(0,221,184,0.4)] active:scale-[0.98]',
+      'bg-accent text-white hover:bg-accent/90 hover:shadow-[0_0_24px_rgba(212,93,19,0.45)] active:scale-[0.98]',
     secondary:
       'border border-white/10 text-text hover:border-white/20 hover:bg-white/[0.04] active:scale-[0.98]',
     ghost:

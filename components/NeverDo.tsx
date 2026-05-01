@@ -7,16 +7,12 @@ const neverDoItems = [
     description: 'We show you available providers and their real prices — you compare, you choose, you pay them directly. We never touch that transaction.',
   },
   {
-    title: 'Ask for additional payments.',
-    description: 'No upsells, no premium features, no surprise charges. Ever.',
+    title: 'Charge you for software you already own.',
+    description: 'The version of CloudsForge you purchased is yours, at the price you paid, forever. Future major versions are separate, optional upgrades — never required, never automatic, and your existing version keeps working indefinitely. Optional add-ons exist (like Cloud Queue), but they\'re never required to use what you bought.',
   },
   {
-    title: 'Take away what you paid for.',
-    description: 'If the price goes up as we add and maintain new features, you keep your license at the price you originally paid. That\'s a permanent commitment.',
-  },
-  {
-    title: 'Promote or favor any AI model or GPU provider.',
-    description: 'We don\'t take commissions, referral fees, or partnerships that influence what we show you. Our job is to bring as many options on board as possible so you decide what\'s best.',
+    title: 'Convert your license into a subscription.',
+    description: 'CloudsForge Personal is a one-time purchase, and that will not change. We will never retroactively shift purchased licenses to recurring billing or paywall features that were available in the version you bought.',
   },
   {
     title: 'Watermark or interfere with your output.',
@@ -41,7 +37,7 @@ export function NeverDo() {
 
         <div className="max-w-[800px] mx-auto">
           <h2 className="font-syne font-800 text-[32px] md:text-[42px] text-white leading-tight tracking-tight text-center mb-12">
-            What OpenSora-UI Will Never Do
+            What CloudsForge Will Never Do
           </h2>
 
           <div className="grid gap-6">

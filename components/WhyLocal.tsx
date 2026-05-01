@@ -33,9 +33,9 @@ const benefits = [
         <path d="M7 10l2 2 4-4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: 'One-time $49',
+    title: 'One-time $59',
     description:
-      'Pay once, use forever. No monthly fees, no seat licenses, no pricing tiers. The license is yours permanently.',
+      'Pay once, use forever. No monthly fees, no seat licenses, no usage tiers. The license is yours permanently.',
     stat: 'Lifetime access',
   },
   {
@@ -77,7 +77,7 @@ const benefits = [
 ]
 
 const comparison = [
-  { label: 'Monthly cost', cloud: '$30–150/mo', local: '$0 after one-time $49' },
+  { label: 'Monthly cost', cloud: '$30–150/mo', local: '$0 after one-time $59' },
   { label: 'Generations', cloud: 'Limited by credits', local: 'Unlimited (pay GPU time only)' },
   { label: 'Privacy', cloud: 'Uploaded to servers', local: 'Never sent to us. Zero telemetry.' },
   { label: 'Queue wait', cloud: '30s–10min (platform queue)', local: 'Your GPU, your queue' },
@@ -85,6 +85,7 @@ const comparison = [
   { label: 'Customization', cloud: 'Platform presets', local: 'Full control' },
   { label: 'GPU cost', cloud: 'Marked up in credits', local: 'Native provider pricing' },
   { label: 'Model cost', cloud: 'Bundled into subscription', local: 'Free (open-source)' },
+  { label: 'Model coverage', cloud: "One platform's models", local: 'Any open-source model on the workstation' },
 ]
 
 export function WhyLocal() {
@@ -94,13 +95,17 @@ export function WhyLocal() {
         {/* Header */}
         <div className="text-center mb-20">
           <span className="font-mono text-[11px] text-text-dim uppercase tracking-[0.15em] block mb-4">
-            Skip the Platform Tax
+            Stop Renting Software That Rents You Hardware
           </span>
           <h2 className="font-syne font-800 text-[36px] md:text-[48px] text-white leading-tight tracking-tight mb-4">
             Rent GPU at cost.
           </h2>
-          <p className="font-body text-text-muted text-[16px] max-w-[500px] mx-auto leading-relaxed">
-            Cloud AI video tools like Runway and Kling buy GPU time in bulk and resell it to you — marked up, credit-gated, and subscription-locked. OpenSora-UI connects directly to providers like RunPod and Vast.ai so you pay their actual rate and keep full control.
+          <p className="font-body text-text-muted text-[16px] max-w-[560px] mx-auto leading-relaxed">
+            Cloud AI tools like Runway, Kling, Midjourney, and DALL·E buy GPU
+            time in bulk and resell it to you — marked up, credit-gated, and
+            subscription-locked. CloudsForge connects directly to providers like
+            RunPod and Vast.ai so you pay their actual rate and keep full
+            control across video, image, and beyond.
           </p>
         </div>
 
@@ -143,7 +148,7 @@ export function WhyLocal() {
             </div>
             <div className="px-6 py-4 border-l border-white/[0.06] text-center">
               <span className="font-mono text-[11px] text-accent uppercase tracking-widest">
-                OpenSora-UI
+                CloudsForge
               </span>
             </div>
           </div>

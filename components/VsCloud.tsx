@@ -1,41 +1,77 @@
-import { Container } from './ui/Container'
+import { Container } from "./ui/Container";
 
 const cards = [
   {
-    visual: '~$0.09 / hr',
-    title: 'Rent GPU at native prices',
-    body: "Use your own hardware, or rent from providers like Vast.ai or RunPod at rates like $0.09/hr. OpenSora-UI connects directly. We don't touch the transaction, mark up the cost, or take a cut.",
+    visual: "starting at ~$1.39 / hr",
+    title: "Rent GPU at native prices",
+    body: "Use your own hardware, or rent from providers like Vast.ai or RunPod at rates like $0.09/hr. CloudsForge connects directly. We don't touch the transaction, mark up the cost, or take a cut.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <rect x="2" y="5" width="14" height="10" rx="2" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M5 5V4a4 4 0 018 0v1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        <rect
+          x="2"
+          y="5"
+          width="14"
+          height="10"
+          rx="2"
+          stroke="currentColor"
+          strokeWidth="1.4"
+        />
+        <path
+          d="M5 5V4a4 4 0 018 0v1"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+        />
         <circle cx="9" cy="10" r="1.5" fill="currentColor" opacity="0.7" />
       </svg>
     ),
   },
   {
-    visual: '$0',
-    title: 'Open-source models, always free',
-    body: 'HunyuanVideo, Wan T2V, Mochi, Open-Sora — all open-source, all free, downloaded straight from HuggingFace. One click in the model manager. No licence fees, no paywalls, no surprises.',
+    visual: "$0",
+    title: "Open-source models, always free",
+    body: "HunyuanVideo, Wan T2V, Mochi, Open-Sora — all open-source, all free, downloaded straight from HuggingFace. One click in the model manager. No licence fees, no paywalls, no surprises.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <path d="M9 2l2.3 4.6L16 7.6l-3.5 3.4.8 4.8L9 13.5l-4.3 2.3.8-4.8L2 7.6l4.7-.9z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+        <path
+          d="M9 2l2.3 4.6L16 7.6l-3.5 3.4.8 4.8L9 13.5l-4.3 2.3.8-4.8L2 7.6l4.7-.9z"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinejoin="round"
+        />
       </svg>
     ),
   },
   {
-    visual: '$49 once',
-    title: 'One payment. No further charges.',
-    body: "$49 gets you the application. That's the only money we ever ask for. No seat licences, no renewal, no \"pro tier\". The licence is yours permanently.",
+    visual: "$59 once",
+    title: "One payment. No further charges.",
+    body: '$59 gets you the application. That\'s the only money we ever ask for on Personal — no seat licences, no renewal, no "pro tier". The licence is yours permanently.',
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <rect x="2" y="4" width="14" height="10" rx="2" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M2 8h14" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-        <path d="M6 12h2M11 12h1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        <rect
+          x="2"
+          y="4"
+          width="14"
+          height="10"
+          rx="2"
+          stroke="currentColor"
+          strokeWidth="1.4"
+        />
+        <path
+          d="M2 8h14"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+        />
+        <path
+          d="M6 12h2M11 12h1"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+        />
       </svg>
     ),
   },
-]
+];
 
 export function VsCloud() {
   return (
@@ -56,7 +92,7 @@ export function VsCloud() {
           </h2>
           <p className="font-body text-text-muted text-[16px] max-w-[560px] mx-auto leading-relaxed">
             Runway, Kling, Pika, and Sora all rent you access to hardware you
-            don&apos;t own and charge per generation. OpenSora-UI flips that
+            don&apos;t own and charge per generation. CloudsForge flips that
             model entirely.
           </p>
         </div>
@@ -88,5 +124,5 @@ export function VsCloud() {
         </div>
       </Container>
     </section>
-  )
+  );
 }

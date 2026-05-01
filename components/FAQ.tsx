@@ -6,12 +6,12 @@ const faqs = [
   {
     question: 'Is this Open-Sora?',
     answer:
-      'No. Open-Sora is an open-source AI video generation model developed by HPC-AI Tech. OpenSora-UI is a completely separate commercial product — a graphical desktop application that makes it easier to install and run Open-Sora and other open-source models on your own computer. We are not affiliated with HPC-AI Tech.',
+      'No. Open-Sora is an open-source AI video generation model developed by HPC-AI Tech. CloudsForge is a completely separate commercial product — a graphical desktop application that makes it easier to install and run Open-Sora and other open-source models on rented cloud GPUs. We are not affiliated with HPC-AI Tech.',
   },
   {
     question: 'Do I need a GPU?',
     answer:
-      'You don\'t need a GPU in your own machine. OpenSora-UI connects to RunPod and Vast.ai so you rent a GPU in the cloud. The models require 48–80 GB VRAM — only available via cloud providers at this time. You pay the provider directly by the hour.',
+      'You don\'t need a GPU in your own machine. CloudsForge connects to RunPod and Vast.ai so you rent a GPU in the cloud. The models require 48–80 GB VRAM — only available via cloud providers at this time. You pay the provider directly by the hour.',
   },
   {
     question: 'Does the license include the models?',
@@ -21,7 +21,27 @@ const faqs = [
   {
     question: 'Is this a subscription?',
     answer:
-      'No. OpenSora-UI is a one-time purchase. You pay once and own the license permanently. There are no monthly fees, no usage limits, no seat charges, and no renewal required. Updates within the current major version are free.',
+      'No. CloudsForge Personal is a one-time purchase. You pay once and own the license permanently. There are no monthly fees, no usage limits, no seat charges, and no renewal required. Updates within the current major version are free. (Studio is a separate, optional annual product for teams — Personal pricing is independent of Studio pricing.)',
+  },
+  {
+    question: 'Will there be paid upgrades?',
+    answer:
+      'Yes — for major version releases (roughly every 12–18 months). Your existing version is yours forever and keeps working. Upgrading is optional, and existing license holders get upgrade pricing (typically ~50% off new-purchase price).',
+  },
+  {
+    question: 'What\'s included in the Studio tier?',
+    answer:
+      'Studio is built for teams who need shared prompt libraries, SSO, multi-user job queues, audit logs, and a support SLA. It\'s a different product for a different buyer — Personal users don\'t need it, and Personal pricing is independent of Studio pricing.',
+  },
+  {
+    question: 'Are you adding more than video generation?',
+    answer:
+      'Yes. Image generation, audio, and LoRA fine-tuning are on the roadmap. Where feasible, these are added within the current major version — meaning Personal license holders get them at no extra cost.',
+  },
+  {
+    question: 'What\'s Cloud Queue?',
+    answer:
+      'An optional add-on for users who want generations to run while they\'re away from their machine. The core CloudsForge app works fully without it. Even with it, your prompts and outputs are not stored or analyzed by us — we only manage the job lifecycle on your behalf.',
   },
   {
     question: 'Can I use it completely offline?',
@@ -31,12 +51,12 @@ const faqs = [
   {
     question: 'Is this legal to use?',
     answer:
-      'Yes. All models supported by OpenSora-UI are open-source projects released under permissive licenses (Apache 2.0, etc.) that explicitly allow personal and commercial use. OpenSora-UI itself is a commercial software wrapper. Always check the specific license of each model for your use case, particularly for commercial output.',
+      'Yes. All models supported by CloudsForge are open-source projects released under permissive licenses (Apache 2.0, etc.) that explicitly allow personal and commercial use. CloudsForge itself is a commercial software wrapper. Always check the specific license of each model for your use case, particularly for commercial output.',
   },
   {
     question: 'What operating systems are supported?',
     answer:
-      'OpenSora-UI runs on Windows 10/11, macOS, and Linux. Because video generation runs on rented cloud GPUs (not your local machine), you don\'t need an NVIDIA GPU in your own computer.',
+      'CloudsForge runs on Windows 10/11, macOS, and Linux. Because video generation runs on rented cloud GPUs (not your local machine), you don\'t need an NVIDIA GPU in your own computer.',
   },
   {
     question: 'What if I need help or find a bug?',
@@ -46,12 +66,12 @@ const faqs = [
   {
     question: 'Can I use a rented GPU instead of my own?',
     answer:
-      'Yes — that\'s the primary way OpenSora-UI works. You connect your RunPod or Vast.ai account, browse available GPU offers (filtered by what each model needs), and rent one directly at the provider\'s published rate. OpenSora-UI handles setup and job execution. You pay the provider directly — we\'re not involved in that transaction.',
+      'Yes — that\'s the primary way CloudsForge works. You connect your RunPod or Vast.ai account, browse available GPU offers (filtered by what each model needs), and rent one directly at the provider\'s published rate. CloudsForge handles setup and job execution. You pay the provider directly — we\'re not involved in that transaction.',
   },
   {
     question: 'Do you track how many videos I generate or collect any usage data?',
     answer:
-      'No. There is no telemetry in OpenSora-UI. We do not track generation counts, prompt content, video output, model usage, or anything else. Once the app is running, it operates entirely on your machine. We have no server that receives data from your installation. This is not a policy that might change — the app is architecturally incapable of sending this data because we never built the infrastructure to receive it.',
+      'No. There is no telemetry in CloudsForge. We do not track generation counts, prompt content, video output, model usage, or anything else. Once the app is running, it operates entirely on your machine. We have no server that receives data from your installation. This is not a policy that might change — the app is architecturally incapable of sending this data because we never built the infrastructure to receive it.',
   },
   {
     question: 'What models are supported?',
@@ -100,7 +120,7 @@ export function FAQ() {
               Read the docs
             </a>
             <a
-              href="mailto:support@opensora-ui.com"
+              href="mailto:support@cloudsforge.com"
               className="inline-flex items-center gap-2 font-body text-sm text-accent hover:text-accent/80 transition-colors border border-accent/25 hover:border-accent/40 bg-accent/[0.07] hover:bg-accent/[0.1] px-5 py-2.5 rounded-lg"
             >
               Contact support

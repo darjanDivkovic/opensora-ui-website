@@ -1,6 +1,7 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Syne, DM_Sans, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { SmoothScroll } from '@/components/SmoothScroll'
 import './globals.css'
 
 const syne = Syne({
@@ -24,26 +25,43 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 })
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
+
 export const metadata: Metadata = {
-  title: 'OpenSora-UI — Rent Cloud GPUs for AI Video Generation',
+  metadataBase: new URL('https://cloudsforge.com'),
+  title: 'CloudsForge — The Workstation for Open-Source AI',
   description:
-    'A desktop app that connects you to RunPod, Vast.ai, and more so you can rent GPUs at cost and generate AI video without touching a terminal. No subscriptions. No markups.',
+    'A local-first desktop app that connects you to RunPod, Vast.ai, and other GPU providers so you can run open-source AI models — video today, image and audio next — without subscriptions, markups, or telemetry.',
   keywords: [
-    'Open-Sora',
+    'CloudsForge',
+    'open-source AI',
+    'AI workstation',
     'AI video generation',
+    'AI image generation',
     'cloud GPU',
     'RunPod',
     'Vast.ai',
-    'video diffusion',
-    'OpenSora UI',
-    'cloud video generation',
     'GPU rental',
+    'LoRA fine-tuning',
+    'Open-Sora',
   ],
+  applicationName: 'CloudsForge',
   openGraph: {
-    title: 'OpenSora-UI — Rent Cloud GPUs for AI Video Generation',
+    title: 'CloudsForge — The Workstation for Open-Source AI',
     description:
-      'A desktop app that connects you to RunPod, Vast.ai, and more so you can rent GPUs at cost and generate AI video without touching a terminal.',
+      'Run open-source AI on rented cloud GPUs. Multi-cloud, multi-model, zero extraction. No subscriptions, no markups, no telemetry.',
+    siteName: 'CloudsForge',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CloudsForge — The Workstation for Open-Source AI',
+    description:
+      'Run open-source AI on rented cloud GPUs. Multi-cloud, multi-model, zero extraction.',
   },
 }
 
@@ -58,6 +76,7 @@ export default function RootLayout({
       className={`${syne.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
     >
       <body>
+        <SmoothScroll />
         {children}
         <Analytics />
       </body>

@@ -32,19 +32,20 @@ export function Problem() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#ff5f57]/10 border border-[#ff5f57]/20 mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-[#ff5f57]" />
               <span className="font-mono text-[11px] text-[#ff5f57] tracking-wide uppercase">
-                Without OpenSora-UI
+                Without CloudsForge
               </span>
             </div>
 
             <h2 className="font-syne font-800 text-[32px] md:text-[38px] text-white leading-tight tracking-tight mb-4">
-              Running Open Source Video Gen Models{' '}
+              Running Open-Source AI{' '}
               <span className="text-text-muted">is unnecessarily hard.</span>
             </h2>
             <p className="font-body text-text-muted text-[15px] leading-relaxed mb-8">
-              Before you can generate a single frame, you&apos;re stuck configuring
-              conda environments, resolving CUDA version mismatches, chasing
-              dependency conflicts, deciphering multi-page install guides, and
-              figuring out which cloud GPU providers to use and at what price.
+              Whether it&apos;s video, image, or audio generation, you&apos;re
+              stuck configuring conda environments, resolving CUDA mismatches,
+              chasing dependency conflicts, deciphering multi-page install
+              guides, and figuring out which cloud GPU providers to use and at
+              what price.
             </p>
 
             <div className="flex flex-wrap gap-2">
@@ -139,7 +140,7 @@ export function Problem() {
             </div>
             <div className="p-5 space-y-3">
               {[
-                { step: '01', label: 'Install OpenSora-UI', done: true },
+                { step: '01', label: 'Install CloudsForge', done: true },
                 { step: '02', label: 'Add your cloud API keys', done: true },
                 { step: '03', label: 'Rent a GPU & let us set it up', done: true },
                 { step: '04', label: 'Generate video', done: true },
@@ -149,7 +150,7 @@ export function Problem() {
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                       <path
                         d="M2.5 7l3 3 6-6"
-                        stroke="#00ddb8"
+                        stroke="#D45D13"
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -172,7 +173,7 @@ export function Problem() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-accent/10 border border-accent/20 mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-accent" />
               <span className="font-mono text-[11px] text-accent tracking-wide uppercase">
-                With OpenSora-UI
+                With CloudsForge
               </span>
             </div>
 
@@ -181,7 +182,7 @@ export function Problem() {
               <span className="gradient-text">No terminal required.</span>
             </h2>
             <p className="font-body text-text-muted text-[15px] leading-relaxed">
-              OpenSora-UI connects to cloud providers and handles all the remote
+              CloudsForge connects to cloud providers and handles all the remote
               dependency management, environment setup, and GPU configuration
               automatically. You add your API keys. You rent a GPU. You generate
               video. That&apos;s it.
