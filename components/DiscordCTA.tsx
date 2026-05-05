@@ -1,4 +1,4 @@
-const DISCORD_URL = "https://discord.gg/kGrtTeBhX";
+const DISCORD_URL = "https://discord.gg/Vg92PZJdCP";
 
 function DiscordIcon({
   size = 24,
