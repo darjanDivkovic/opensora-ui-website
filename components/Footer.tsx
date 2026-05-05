@@ -66,7 +66,7 @@ export function Footer() {
                 { label: 'Documentation', href: '#' },
                 { label: 'GitHub', href: 'https://github.com', external: true },
                 { label: 'License', href: '#' },
-                { label: 'Contact', href: 'mailto:support@cloudsforge.com' },
+                { label: 'Contact', href: 'mailto:darren@cloudsforge.com' },
                 {
                   label: 'Open-Sora (HPC-AI Tech)',
                   href: 'https://github.com/hpcaitech/Open-Sora',

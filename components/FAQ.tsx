@@ -1,6 +1,7 @@
 import { Container } from './ui/Container'
 import { Section } from './ui/Section'
 import { FAQItem } from './ui/FAQItem'
+import { BuyButton } from './BuyButton'
 
 const faqs = [
   {
@@ -107,20 +108,15 @@ export function FAQ() {
         {/* Still have questions */}
         <div className="mt-12 text-center p-8 rounded-xl border border-white/[0.07] bg-surface/40">
           <h3 className="font-syne font-700 text-[18px] text-white mb-2">
-            Still have questions?
+            Ready when you are.
           </h3>
           <p className="font-body text-sm text-text-muted mb-5">
-            Check the documentation or reach out directly.
+            Lifetime Personal license, $59. One-time. Or email if something&apos;s unclear.
           </p>
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <BuyButton />
             <a
-              href="#"
-              className="inline-flex items-center gap-2 font-body text-sm text-text-muted hover:text-text transition-colors border border-white/[0.07] hover:border-white/[0.12] px-5 py-2.5 rounded-lg hover:bg-white/[0.03]"
-            >
-              Read the docs
-            </a>
-            <a
-              href="mailto:support@cloudsforge.com"
+              href="mailto:darren@cloudsforge.com"
               className="inline-flex items-center gap-2 font-body text-sm text-accent hover:text-accent/80 transition-colors border border-accent/25 hover:border-accent/40 bg-accent/[0.07] hover:bg-accent/[0.1] px-5 py-2.5 rounded-lg"
             >
               Contact support

@@ -2,7 +2,7 @@
 
 import { Container } from "./ui/Container";
 import { Section } from "./ui/Section";
-import { WishlistButton } from "./WishlistButton";
+import { BuyButton } from "./BuyButton";
 
 // Studio tier is hidden for now. Set this to true to bring it back.
 const SHOW_STUDIO = false;
@@ -138,7 +138,7 @@ export function Pricing() {
               </ul>
 
               {/* CTA */}
-              <WishlistButton className="w-full justify-center" />
+              <BuyButton className="w-full justify-center" />
             </div>
           </div>
 
@@ -190,7 +190,7 @@ export function Pricing() {
 
               {/* CTA */}
               <a
-                href="mailto:support@cloudsforge.com?subject=CloudsForge%20Studio%20access"
+                href="mailto:darren@cloudsforge.com?subject=CloudsForge%20Studio%20access"
                 className="w-full inline-flex items-center justify-center gap-2 font-body font-600 text-[14px] px-5 py-3 rounded-lg border border-accent-2/40 text-accent-2 hover:bg-accent-2/10 transition-colors"
               >
                 Get Studio access

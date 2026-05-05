@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { WishlistNavButton } from "./WishlistButton";
+import { BuyNavButton } from "./BuyButton";
 
 const navLinks = [
   { label: "Features", href: "/#features" },
@@ -59,7 +59,7 @@ export function Navbar() {
 
         {/* CTAs */}
         <div className="flex items-center gap-2">
-          <WishlistNavButton />
+          <BuyNavButton />
         </div>
       </div>
     </header>

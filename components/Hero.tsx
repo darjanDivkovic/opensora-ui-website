@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { WishlistButton } from "./WishlistButton";
+import { BuyButton } from "./BuyButton";
 import { Lightning } from "./ui/Lightning";
 
 export function Hero() {
@@ -151,7 +151,7 @@ export function Hero() {
 
         {/* CTAs */}
         <div className="animate-fade-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3 mb-5 sm:mb-8">
-          <WishlistButton />
+          <BuyButton />
         </div>
 
         {/* Trust line */}
