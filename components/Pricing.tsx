@@ -79,8 +79,7 @@ export function Pricing() {
             Simple pricing. <span className="gradient-text">No surprises.</span>
           </h2>
           <p className="font-body text-text-muted text-[16px] max-w-[480px] mx-auto leading-relaxed">
-            Pay once. Own it forever. No subscription, no markups, no
-            telemetry.
+            Pay once. Own it forever. No subscription, no markups, no telemetry.
           </p>
         </div>
 
@@ -115,7 +114,7 @@ export function Pricing() {
               {/* Price */}
               <div className="mb-6 flex items-baseline gap-2">
                 <span className="font-syne text-[64px] font-800 text-white leading-none">
-                  $59
+                  $49
                 </span>
                 <span className="font-body text-text-muted text-sm">
                   one-time
@@ -144,68 +143,68 @@ export function Pricing() {
 
           {/* ── Studio (hidden via SHOW_STUDIO flag) ── */}
           {SHOW_STUDIO && (
-          <div className="relative rounded-2xl border border-white/[0.08] bg-surface/40 overflow-hidden">
-            <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-accent-2/40 to-transparent" />
+            <div className="relative rounded-2xl border border-white/[0.08] bg-surface/40 overflow-hidden">
+              <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-accent-2/40 to-transparent" />
 
-            <div className="relative p-8 md:p-10">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-accent-2/30 bg-accent-2/[0.08] mb-5">
-                <div className="w-1.5 h-1.5 rounded-full bg-accent-2" />
-                <span className="font-mono text-[11px] text-accent-2 tracking-widest uppercase">
-                  Annual · Studio
-                </span>
+              <div className="relative p-8 md:p-10">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-accent-2/30 bg-accent-2/[0.08] mb-5">
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent-2" />
+                  <span className="font-mono text-[11px] text-accent-2 tracking-widest uppercase">
+                    Annual · Studio
+                  </span>
+                </div>
+
+                <h3 className="font-syne font-800 text-[22px] text-white mb-1">
+                  Studio
+                </h3>
+                <p className="font-body text-text-muted text-sm mb-5">
+                  For teams that ship.
+                </p>
+
+                {/* Price */}
+                <div className="mb-6 flex items-baseline gap-2">
+                  <span className="font-syne text-[64px] font-800 text-white leading-none">
+                    $299
+                  </span>
+                  <span className="font-body text-text-muted text-sm">
+                    / year per seat
+                  </span>
+                </div>
+
+                {/* Divider */}
+                <div className="glow-line mb-6" />
+
+                {/* Features */}
+                <ul className="space-y-3 mb-8">
+                  {studioFeatures.map((f) => (
+                    <li key={f} className="flex items-start gap-3">
+                      <CheckIcon />
+                      <span className="font-body text-sm text-text leading-relaxed">
+                        {f}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <a
+                  href="mailto:darren@cloudsforge.com?subject=CloudsForge%20Studio%20access"
+                  className="w-full inline-flex items-center justify-center gap-2 font-body font-600 text-[14px] px-5 py-3 rounded-lg border border-accent-2/40 text-accent-2 hover:bg-accent-2/10 transition-colors"
+                >
+                  Get Studio access
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5"
+                      stroke="currentColor"
+                      strokeWidth="1.4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
               </div>
-
-              <h3 className="font-syne font-800 text-[22px] text-white mb-1">
-                Studio
-              </h3>
-              <p className="font-body text-text-muted text-sm mb-5">
-                For teams that ship.
-              </p>
-
-              {/* Price */}
-              <div className="mb-6 flex items-baseline gap-2">
-                <span className="font-syne text-[64px] font-800 text-white leading-none">
-                  $299
-                </span>
-                <span className="font-body text-text-muted text-sm">
-                  / year per seat
-                </span>
-              </div>
-
-              {/* Divider */}
-              <div className="glow-line mb-6" />
-
-              {/* Features */}
-              <ul className="space-y-3 mb-8">
-                {studioFeatures.map((f) => (
-                  <li key={f} className="flex items-start gap-3">
-                    <CheckIcon />
-                    <span className="font-body text-sm text-text leading-relaxed">
-                      {f}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA */}
-              <a
-                href="mailto:darren@cloudsforge.com?subject=CloudsForge%20Studio%20access"
-                className="w-full inline-flex items-center justify-center gap-2 font-body font-600 text-[14px] px-5 py-3 rounded-lg border border-accent-2/40 text-accent-2 hover:bg-accent-2/10 transition-colors"
-              >
-                Get Studio access
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path
-                    d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
             </div>
-          </div>
           )}
         </div>
 

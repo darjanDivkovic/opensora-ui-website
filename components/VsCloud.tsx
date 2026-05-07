@@ -42,9 +42,9 @@ const cards = [
     ),
   },
   {
-    visual: "$59 once",
+    visual: "$49 once",
     title: "One payment. No further charges.",
-    body: '$59 gets you the application. That\'s the only money we ever ask for on Personal — no seat licences, no renewal, no "pro tier". The licence is yours permanently.',
+    body: '$49 gets you the application. That\'s the only money we ever ask for on Personal — no seat licences, no renewal, no "pro tier". The licence is yours permanently.',
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
         <rect

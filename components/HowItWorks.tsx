@@ -148,7 +148,7 @@ export function HowItWorks() {
             href="/pricing"
             className="inline-flex items-center gap-2 font-body text-sm text-accent hover:text-accent/80 transition-colors group"
           >
-            Get started for $59
+            Get started for $49
             <svg
               width="14"
               height="14"
