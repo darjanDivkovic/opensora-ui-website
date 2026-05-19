@@ -36,7 +36,7 @@ export function BuyButton({ className }: { className?: string }) {
       className={`${buyShell} px-6 py-3 text-[14px] gap-2 tracking-[-0.005em] ${className ?? ""}`}
     >
       <CartIcon size={14} />
-      Buy CloudsForge
+      Start Generating
     </a>
   );
 }
@@ -50,7 +50,7 @@ export function BuyNavButton() {
       rel="noopener noreferrer"
       className={`${buyShell} px-4 py-1.5 text-[13px] gap-1.5`}
     >
-      Buy CloudsForge
+      Start Generating
     </a>
   );
 }

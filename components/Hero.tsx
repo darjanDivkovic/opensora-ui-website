@@ -1,12 +1,23 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { BuyButton } from "./BuyButton";
 import { Lightning } from "./ui/Lightning";
 
+const VIMEO_ID = "1193693889";
+
 export function Hero() {
+  const [autoplay, setAutoplay] = useState(false);
+
+  const handleViewDemo = () => {
+    setAutoplay(true);
+    const el = document.getElementById("demo");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   return (
-    <section className="relative sm:min-h-screen flex flex-col items-center sm:justify-center pt-[80px] pb-12  sm:pb-0 overflow-hidden mt-[66px]">
+    <section className="relative sm:min-h-screen flex flex-col items-center sm:justify-center pt-[80px] pb-12 sm:pb-0 overflow-hidden mt-[66px]">
       {/* Lightning shader (background) */}
       <div className="absolute inset-0 pointer-events-none z-0 opacity-60">
         <Lightning
@@ -19,10 +30,10 @@ export function Hero() {
         />
       </div>
 
-      {/* Generated-video ambient grid (flanking the centerpiece, plays on hover) */}
+      {/* Generated-video ambient grid (flanking the demo video, plays on hover) */}
       <div className="absolute inset-0 pointer-events-none z-[2] hidden lg:block opacity-45">
         {/* Left cluster */}
-        <div className="absolute left-[8%] top-[65%] w-[12%] aspect-[3/4] rounded-xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/60 pointer-events-auto">
+        <div className="absolute left-[8%] top-[58%] w-[11%] aspect-[3/4] rounded-xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/60 pointer-events-auto">
           <video
             src="/videos/gen-2.mp4"
             poster="/videos/gen-2.jpg"
@@ -31,7 +42,6 @@ export function Hero() {
             playsInline
             preload="none"
             onMouseEnter={(e) => {
-              // Swallow AbortError — fires when the user hovers out before play() resolves.
               e.currentTarget.play().catch(() => {});
             }}
             onMouseLeave={(e) => {
@@ -41,7 +51,7 @@ export function Hero() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute left-[1%] top-[82%] w-[10%] aspect-square rounded-xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/60 pointer-events-auto">
+        <div className="absolute left-[1%] top-[80%] w-[9%] aspect-square rounded-xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/60 pointer-events-auto">
           <video
             src="/videos/gen-3.mp4"
             poster="/videos/gen-3.jpg"
@@ -50,7 +60,6 @@ export function Hero() {
             playsInline
             preload="none"
             onMouseEnter={(e) => {
-              // Swallow AbortError — fires when the user hovers out before play() resolves.
               e.currentTarget.play().catch(() => {});
             }}
             onMouseLeave={(e) => {
@@ -62,7 +71,7 @@ export function Hero() {
         </div>
 
         {/* Right cluster — mirrored positions */}
-        <div className="absolute right-[8%] top-[65%] w-[12%] aspect-[3/4] rounded-xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/60 pointer-events-auto">
+        <div className="absolute right-[8%] top-[58%] w-[11%] aspect-[3/4] rounded-xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/60 pointer-events-auto">
           <video
             src="/videos/gen-1.mp4"
             poster="/videos/gen-1.jpg"
@@ -71,7 +80,6 @@ export function Hero() {
             playsInline
             preload="none"
             onMouseEnter={(e) => {
-              // Swallow AbortError — fires when the user hovers out before play() resolves.
               e.currentTarget.play().catch(() => {});
             }}
             onMouseLeave={(e) => {
@@ -81,7 +89,7 @@ export function Hero() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute right-[1%] top-[82%] w-[10%] aspect-square rounded-xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/60 pointer-events-auto">
+        <div className="absolute right-[1%] top-[80%] w-[9%] aspect-square rounded-xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/60 pointer-events-auto">
           <video
             src="/videos/gen-4.mp4"
             poster="/videos/gen-4.jpg"
@@ -90,7 +98,6 @@ export function Hero() {
             playsInline
             preload="none"
             onMouseEnter={(e) => {
-              // Swallow AbortError — fires when the user hovers out before play() resolves.
               e.currentTarget.play().catch(() => {});
             }}
             onMouseLeave={(e) => {
@@ -116,26 +123,26 @@ export function Hero() {
         className="absolute inset-0 pointer-events-none z-[5]"
         style={{
           background:
-            "radial-gradient(ellipse 55% 42% at 50% 38%, rgba(6,6,9,0.88) 0%, rgba(6,6,9,0.6) 45%, rgba(6,6,9,0) 78%)",
+            "radial-gradient(ellipse 55% 38% at 50% 32%, rgba(6,6,9,0.88) 0%, rgba(6,6,9,0.6) 45%, rgba(6,6,9,0) 78%)",
         }}
       />
 
-      <div className="relative z-10 max-w-[1200px] px-6 md:px-8 mt-16 text-center">
+      <div className="relative z-10 max-w-[1200px] px-6 md:px-8 mt-8 sm:mt-4 text-center">
         {/* Logo */}
-        <div className="animate-fade-in flex justify-center mb-6 sm:mb-8">
+        <div className="animate-fade-in flex justify-center mb-4 sm:mb-6">
           <Image
             src="/logo-nobg.png"
             alt="CloudsForge"
             width={80}
             height={80}
-            className="w-16 h-16 sm:w-20 sm:h-20"
+            className="w-14 h-14 sm:w-16 sm:h-16"
             priority
           />
         </div>
 
         {/* Heading */}
-        <h1 className="animate-fade-up delay-100 font-syne font-800 text-[28px] md:text-[44px] lg:text-[48px] text-white leading-[1.12] tracking-[-0.025em] mb-4 sm:mb-12 max-w-[980px] mx-auto">
-          Want to generate videos <br /> with{" "}
+        <h1 className="animate-fade-up delay-100 font-syne font-800 text-[26px] md:text-[38px] lg:text-[42px] text-white leading-[1.12] tracking-[-0.025em] mb-3 sm:mb-6 max-w-[920px] mx-auto">
+          Want to generate videos with{" "}
           <span className="gradient-text">Open-Source models</span>{" "}
           <span className="opacity-60">
             but don&apos;t have the GPU or the ability to set them up?
@@ -143,19 +150,38 @@ export function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <p className="animate-fade-up delay-200 font-body text-[16px] md:text-[16px] opacity-70 leading-relaxed max-w-[720px] mx-auto mb-6 sm:mb-10">
+        <p className="animate-fade-up delay-200 font-body text-[14px] md:text-[15px] opacity-70 leading-relaxed max-w-[680px] mx-auto mb-5 sm:mb-6">
           CloudsForge is a desktop app that rents you a cloud GPU and configures
           everything in a couple of clicks. You run state-of-the-art open-source
           video models at the GPU provider&apos;s rate
         </p>
 
         {/* CTAs */}
-        <div className="animate-fade-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3 mb-5 sm:mb-8">
+        <div className="animate-fade-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3 mb-4 sm:mb-5">
           <BuyButton />
+          <button
+            type="button"
+            onClick={handleViewDemo}
+            className="group inline-flex items-center justify-center gap-2 px-6 py-3 text-[14px] font-body font-600 text-white rounded-lg border border-white/[0.14] bg-white/[0.04] hover:bg-white/[0.08] hover:border-white/[0.22] transition-all duration-200 tracking-[-0.005em] backdrop-blur-sm"
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M5 3.5v9l7-4.5-7-4.5z"
+                fill="currentColor"
+              />
+            </svg>
+            View Demo
+          </button>
         </div>
 
         {/* Trust line */}
-        <div className="animate-fade-in delay-400 flex flex-wrap items-center justify-center gap-3 text-text-muted">
+        <div className="animate-fade-in delay-400 flex flex-wrap items-center justify-center gap-3 text-text-muted mb-8 sm:mb-10">
           {[
             "You own what you buy",
             "Multi-cloud, multi-model",
@@ -171,13 +197,16 @@ export function Hero() {
         </div>
 
         {/* Motion graphics video — click to play with sound (Vimeo default behaviour) */}
-        <div className="animate-fade-up delay-500 mt-16 sm:mt-[250px] relative mx-auto max-w-[900px]">
+        <div
+          id="demo"
+          className="animate-fade-up delay-500 relative mx-auto max-w-[760px]"
+        >
           <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-accent/20 to-transparent pointer-events-none" />
           <div className="absolute -inset-8 bg-accent/[0.03] blur-3xl rounded-3xl pointer-events-none" />
 
           <div className="relative rounded-2xl border border-white/[0.09] bg-black overflow-hidden shadow-2xl shadow-black/60 aspect-video">
             <iframe
-              src="https://player.vimeo.com/video/1193693889"
+              src={`https://player.vimeo.com/video/${VIMEO_ID}${autoplay ? "?autoplay=1" : ""}`}
               className="absolute inset-0 w-full h-full"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               allowFullScreen
