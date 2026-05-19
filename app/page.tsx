@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { MockupShowcase } from "@/components/MockupShowcase";
 import { TrustStrip } from "@/components/TrustStrip";
 import { Problem } from "@/components/Problem";
 import { Features } from "@/components/Features";
@@ -19,6 +20,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <MockupShowcase />
+        <Pricing />
         {/* <TrustStrip /> */}
         <Problem />
         <Features />
@@ -28,7 +31,6 @@ export default function Home() {
         <WhyLocal />
         <NeverDo />
         <VsCloud />
-        <Pricing />
         <FAQ />
       </main>
       <Footer />
